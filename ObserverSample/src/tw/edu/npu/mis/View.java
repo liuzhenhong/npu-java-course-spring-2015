@@ -30,7 +30,7 @@ package tw.edu.npu.mis;
  *
  * @author Samael Wang <freesamael@gmail.com>
  */
-public class View {
+public class View extends AllView{
 
     private final String mName;
     private final Window mWindow;
@@ -40,6 +40,7 @@ public class View {
         mName = name;
         mWindow = window;
         mModel = model;
+        mModel.attach(this);
     }
 
     /**
@@ -56,4 +57,8 @@ public class View {
         System.out.println("View (" + mName + "): " + mModel.getData());
     }
 
+    @Override
+    public void update() {
+        invalidate();
+    }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015, Samael Wang <freesamael@gmail.com>
+ * Copyright (c) 2015, user
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -29,25 +29,34 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Simulation of a GUI application.
  *
- * @author Samael Wang <freesamael@gmail.com>
+ * @author user
  */
-public class ObserverSample {
-
-    public static void main(String[] args) {
-        // Initialize MVC and Window objects.
-        Window window = new Window();
-        Model model = new Model();
-        Controller controller = new Controller(model);
-        List<AllView> views = new ArrayList<>();
-        views.add(new View("View 1", window, model));
-        views.add(new View("View 2", window, model));
-        views.add(new View("View 3", window, model));
-        views.add(new AlternativeView("View 4",window, model));
-        
-
-        // Start the event loop.
-        window.startEventLoop(controller, views);
+public class Subject {
+    public List<Observer> ObserverList = new ArrayList<Observer>();
+    
+    /**
+     * @param o 
+     * 新增要註冊的View
+     */
+    public void attach(Observer o) {
+        ObserverList.add(o);
+    }
+    
+    /**
+     * @param o 
+     * 移除沒有要註冊的View
+     */
+    public void detach(Observer o) {
+        ObserverList.remove(o);
+    }
+    
+    /**
+     * Model一有變動會呼叫所有有註冊的View
+     */
+    public void notifyObserver() {
+        for(Observer o: ObserverList) {
+            o.update();
+        }
     }
 }
