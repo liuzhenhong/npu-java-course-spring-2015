@@ -61,7 +61,7 @@ public class AlternativeView extends AllView{
         System.out.println("AlternativeView (" + mName + "): " + new StringBuilder(mModel.getData()).reverse());
     }
     /**
-     * Model的資料有變動的話, 就呼叫View
+     * Model的資料有新增的話, 就會呼叫View
      */
     @Override
     public void update() {

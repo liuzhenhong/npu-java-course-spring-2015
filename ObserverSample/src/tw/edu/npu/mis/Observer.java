@@ -30,5 +30,8 @@ package tw.edu.npu.mis;
  * @author user
  */
 public interface Observer {
+    /**
+     * Model有新增資料的話，就會呼叫View
+     */
     void update();
 }
