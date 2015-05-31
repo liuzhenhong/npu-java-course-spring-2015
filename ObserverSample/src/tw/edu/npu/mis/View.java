@@ -48,7 +48,6 @@ public class View extends AllView{
         mModel = model;
         mModel.attach(this);
     }
-   
     /**
      *把View加入Window類別中View陣列裡 
      */
@@ -65,7 +64,9 @@ public class View extends AllView{
     public void onDraw() {
         System.out.println("View (" + mName + "): " + mModel.getData());
     }
-
+    /**
+     * Model的資料有新增的話, 就會呼叫View
+     */ 
     @Override
     public void update() {
         invalidate();
