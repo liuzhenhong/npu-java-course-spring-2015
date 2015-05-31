@@ -37,7 +37,7 @@ public class Subject {
     
     /**
      * @param o 
-     * 新增要註冊的View
+     * 新增需要註冊的View
      */
     public void attach(Observer o) {
         ObserverList.add(o);
@@ -45,14 +45,14 @@ public class Subject {
     
     /**
      * @param o 
-     * 移除沒有要註冊的View
+     * 移除沒有需要註冊的View
      */
     public void detach(Observer o) {
         ObserverList.remove(o);
     }
     
     /**
-     * Model一有變動會呼叫所有有註冊的View
+     * Model一有變動需要呼叫所有註冊的View
      */
     public void notifyObserver() {
         for(Observer o: ObserverList) {

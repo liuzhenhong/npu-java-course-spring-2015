@@ -33,6 +33,12 @@ public class AlternativeView extends AllView{
     private final String mName;
     private final Window mWindow;
     private final Model mModel;
+      /**
+     * view的抽象類別 有下列參數的建構式
+     * @param name 
+     * @param window 
+     * @param model 
+     */
 
     public AlternativeView(String name, Window window, Model model) {
         mName = name;
@@ -42,7 +48,7 @@ public class AlternativeView extends AllView{
     }
 
     /**
-     * Invalidate the view, which indicates it needs to be redrawn later.
+     *把View加入Window類別中View陣列裡 
      */
     public void invalidate() {
         mWindow.schduleRedraw(this);
@@ -54,7 +60,9 @@ public class AlternativeView extends AllView{
     public void onDraw() {
         System.out.println("AlternativeView (" + mName + "): " + new StringBuilder(mModel.getData()).reverse());
     }
-    
+    /**
+     * Model的資料有變動的話, 就呼叫View
+     */
     @Override
     public void update() {
         invalidate();
