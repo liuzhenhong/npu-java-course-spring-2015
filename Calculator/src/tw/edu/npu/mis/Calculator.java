@@ -32,11 +32,12 @@ public class Calculator extends Subject{
         MEM_PLUS,    // M+
         MEM_MINUS,   // M-
         MEM_RECALL,   // MR
-        SQUARE
+        SQUARE,        //平方   
     }
-    
+    /**
+     * 數字相加，如果判斷是10自動加00，不然就是數字0~9
+     */
     public void appendDigit(int digit) {
-        //00
         if(digit == 10) Digit +="00";
         else Digit += digit;
         notifyObserver();
@@ -46,6 +47,9 @@ public class Calculator extends Subject{
         // TODO code application logic here
     }
     
+    /**
+     * 執行邏輯運算的結果
+     */
     public void performOperation(Operator operator) {
         switch(operator) {
             case PLUS:
@@ -92,14 +96,16 @@ public class Calculator extends Subject{
         }
         notifyObserver();
     }
-    
+    /**
+     * 
+     */
     public String getDisplay() {
         if(!Digit.isEmpty()) return Digit;
         return null;
     }
 
     /**
-     * @param args the command line arguments
+     * 
      */
     public static void main(String[] args) {
         Calculator Model = new Calculator();
