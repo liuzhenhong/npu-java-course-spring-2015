@@ -328,82 +328,102 @@ public class computer extends javax.swing.JFrame implements Observer {
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         mCalculator.performOperation(Calculator.Operator.EQUAL);
+        // =
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         mCalculator.performOperation(Calculator.Operator.MINUS);
+        // -
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         mCalculator.appendDigit(Integer.valueOf(jButton1.getText()));
+        // 數字1
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         mCalculator.appendDigit(Integer.valueOf(jButton2.getText()));
+        // 數字2
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         mCalculator.appendDigit(Integer.valueOf(jButton3.getText()));
+        // 數字3
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
        mCalculator.appendDigit(Integer.valueOf(jButton4.getText()));
+       // 數字4
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
        mCalculator.appendDigit(Integer.valueOf(jButton5.getText()));
+       // 數字5
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         mCalculator.appendDigit(Integer.valueOf(jButton6.getText()));
+        // 數字6
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
       mCalculator.appendDigit(Integer.valueOf(jButton7.getText()));
+      // 數字7
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         mCalculator.appendDigit(Integer.valueOf(jButton8.getText()));
+       // 數字8
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
        mCalculator.appendDigit(Integer.valueOf(jButton9.getText()));
+       // 數字9
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         mCalculator.appendDigit(Integer.valueOf(jButton11.getText()));
+        // 數字0
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         mCalculator.performOperation(Calculator.Operator.PLUS);
+        // +
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
      mCalculator.performOperation(Calculator.Operator.TIMES);
+     // *
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         mCalculator.performOperation(Calculator.Operator.OVER);
+        // /
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         mCalculator.appendDigit(10);
+        // 辨識00的字串
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         mCalculator.performOperation(Calculator.Operator.CLEAR);
+        // AC
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         mCalculator.performOperation(Calculator.Operator.PLUS_MINUS);
+        // 負號
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
         mCalculator.performOperation(Calculator.Operator.SQUARE);
+        // 平方
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
         mCalculator.performOperation(Calculator.Operator.RECIPROCAL);
+        // x的倒數
     }//GEN-LAST:event_jButton20ActionPerformed
 
     

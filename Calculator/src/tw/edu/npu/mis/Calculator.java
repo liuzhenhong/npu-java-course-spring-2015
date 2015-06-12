@@ -15,7 +15,7 @@ public class Calculator extends Subject{
      * The available operators of the calculator.
      */
     public enum Operator {
-        CLEAR,       // C
+        CLEAR,       // AC
         CLEAR_ENTRY, // CE
         BACKSPACE,   // ⌫
         EQUAL,       // =
@@ -41,10 +41,6 @@ public class Calculator extends Subject{
         if(digit == 10) Digit +="00";
         else Digit += digit;
         notifyObserver();
-    }
-    
-    public void appendDot() {
-        // TODO code application logic here
     }
     
     /**
@@ -96,16 +92,13 @@ public class Calculator extends Subject{
         }
         notifyObserver();
     }
-    /**
-     * 
-     */
+
     public String getDisplay() {
-        if(!Digit.isEmpty()) return Digit;
-        return null;
+        return Digit;
     }
 
     /**
-     * 
+     * view跟model實作部分
      */
     public static void main(String[] args) {
         Calculator Model = new Calculator();
