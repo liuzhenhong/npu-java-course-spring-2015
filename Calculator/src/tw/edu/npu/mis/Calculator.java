@@ -8,8 +8,9 @@ package tw.edu.npu.mis;
 /**
  * The model class of the calculator application.
  */
-public class Calculator {
+public class Calculator extends Subject{
     
+    String Digit = "", number = "", mark = "";
     /**
      * The available operators of the calculator.
      */
@@ -30,11 +31,15 @@ public class Calculator {
         MEM_SET,     // MS
         MEM_PLUS,    // M+
         MEM_MINUS,   // M-
-        MEM_RECALL   // MR
+        MEM_RECALL,   // MR
+        SQUARE
     }
     
     public void appendDigit(int digit) {
-        // TODO code application logic here
+        //00
+        if(digit == 10) Digit +="00";
+        else Digit += digit;
+        notifyObserver();
     }
     
     public void appendDot() {
@@ -42,11 +47,54 @@ public class Calculator {
     }
     
     public void performOperation(Operator operator) {
-        // TODO code application logic here
+        switch(operator) {
+            case PLUS:
+                number = Digit;
+                Digit = "";
+                mark = "+";
+                break;
+            case MINUS:
+                number = Digit;
+                Digit = "";
+                mark = "-";
+                break;
+            case TIMES:
+                number = Digit;
+                Digit = "";
+                mark = "*";
+                break;
+            case OVER:
+                number = Digit;
+                Digit = "";
+                mark = "/";
+                break;
+            case EQUAL:
+                if(mark == "+") Digit = String.valueOf(Integer.valueOf(number) + Integer.valueOf(Digit));
+                else if(mark == "-") Digit = String.valueOf(Integer.valueOf(number) - Integer.valueOf(Digit));
+                else if(mark == "*") Digit = String.valueOf(Integer.valueOf(number) * Integer.valueOf(Digit));
+                else if(mark == "/") Digit = String.valueOf(Integer.valueOf(number) / Integer.valueOf(Digit));
+                mark = "";
+                break;
+            case CLEAR:
+                Digit = "";
+                number = "";
+                mark = "";
+                break;
+            case PLUS_MINUS:
+                Digit = String.valueOf(Integer.valueOf(Digit) * -1);
+                break;
+            case SQUARE:
+                Digit = String.valueOf(Integer.valueOf(Digit) * Integer.valueOf(Digit));
+                break;
+            case RECIPROCAL:
+                Digit = String.valueOf(1 / Double.valueOf(Digit));
+                break;
+        }
+        notifyObserver();
     }
     
     public String getDisplay() {
-        // TODO code application logic here
+        if(!Digit.isEmpty()) return Digit;
         return null;
     }
 
@@ -54,7 +102,9 @@ public class Calculator {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Calculator Model = new Calculator();
+        computer View = new computer(Model);
+        View.setVisible(true);
     }
 
 }
